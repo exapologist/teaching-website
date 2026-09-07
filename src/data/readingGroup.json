@@ -1,0 +1,60 @@
+{
+  "title": "Philosophy of Physics & Science",
+  "intro": "Explore what quantum theory tells us about reality and how scientific knowledge works. Our reading group brings these questions together through three books.",
+  "meetingNote": "Meeting dates, format, and pace will be announced by Prof. Leon.",
+  "meetingUrl": "",
+  "meetingLabel": "Meeting details",
+  "sessions": [
+    {
+      "id": "maudlin-introduction",
+      "stage": "Start here · Physics introduction",
+      "title": "The experiments a theory must explain",
+      "author": "Tim Maudlin",
+      "book": "Philosophy of Physics: Quantum Theory",
+      "assignment": "Chapter 1",
+      "description": "Begin with the experimental starting point for our study of quantum interpretations. Keep a record of the phenomena an adequate interpretation needs to explain.",
+      "readingUrl": "",
+      "notebookUrl": "https://notebook.google.com/notebook/e02489e1-b726-431a-97ca-621efd650dc6",
+      "resources": [],
+      "questions": [
+        "Choose an experiment in the chapter. What is the setup, what is observed, and what needs explaining?",
+        "Which claims describe experimental results, and which claims propose an account of the reality behind those results?",
+        "What would you ask of an interpretation before accepting it as an adequate explanation?"
+      ]
+    },
+    {
+      "id": "lewis-quantum-ontology",
+      "stage": "Continue · Philosophy of physics",
+      "title": "What is the quantum world like?",
+      "author": "Peter J. Lewis",
+      "book": "Quantum Ontology",
+      "assignment": "Chapter-by-chapter assignments to follow",
+      "description": "After the Maudlin introduction, work through Lewis together. Compare the proposals we encounter by asking what exists on each view and how it accounts for the evidence.",
+      "readingUrl": "",
+      "notebookUrl": "https://notebook.google.com/notebook/13e0a40c-1c93-41f9-b7d6-c96f3285532a",
+      "resources": [],
+      "questions": [
+        "For the proposal under discussion, what does it say exists? State its central claim in your own words.",
+        "How does it account for the experiments we studied with Maudlin?",
+        "What is the strongest objection raised in the reading, and what reply is available?"
+      ]
+    },
+    {
+      "id": "godfrey-smith-theory-reality",
+      "stage": "Alongside physics · Philosophy of science",
+      "title": "How does science tell us about reality?",
+      "author": "Peter Godfrey-Smith",
+      "book": "Theory and Reality",
+      "assignment": "Edition and chapter assignments to be confirmed",
+      "description": "Work through the philosophy-of-science strand alongside our physics discussions. Use questions about evidence, explanation, and theory choice to connect the two strands.",
+      "readingUrl": "",
+      "notebookUrl": "https://notebook.google.com/notebook/7155abee-32dc-4daa-ac8a-c5a4edda74c5",
+      "resources": [],
+      "questions": [
+        "What picture of scientific knowledge is being proposed in the assigned reading?",
+        "What reasons does the author give for accepting or questioning that picture?",
+        "How might this discussion help us compare interpretations of quantum theory?"
+      ]
+    }
+  ]
+}

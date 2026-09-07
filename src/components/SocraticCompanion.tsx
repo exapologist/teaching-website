@@ -69,7 +69,7 @@ export default function SocraticCompanion({ course }: SocraticCompanionProps) {
     {
       id: "welcome",
       role: "assistant",
-      content: `Greetings! I am Prof. Felipe Leon. Welcome to our Socratic Study Companion for **${course.num}: ${course.title}**. Let's dive deep into philosophical inquiry. What question or reading snippet from our syllabus can we explore together today?`,
+      content: `Hello! I am an AI study companion, not Prof. Leon. Welcome to our Socratic Study Companion for **${course.num}: ${course.title}**. Let's dive deep into philosophical inquiry. What question or reading snippet from our syllabus can we explore together today?`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }
   ]);
@@ -153,7 +153,7 @@ export default function SocraticCompanion({ course }: SocraticCompanionProps) {
       {
         id: "welcome",
         role: "assistant",
-        content: `Greetings! I am Prof. Felipe Leon. Welcome to our Socratic Study Companion for **${course.num}: ${course.title}**. Let's dive deep into philosophical inquiry. What question or reading snippet from our syllabus can we explore together today?`,
+        content: `Hello! I am an AI study companion, not Prof. Leon. Welcome to our Socratic Study Companion for **${course.num}: ${course.title}**. Let's dive deep into philosophical inquiry. What question or reading snippet from our syllabus can we explore together today?`,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
       }
     ]);
@@ -191,7 +191,7 @@ export default function SocraticCompanion({ course }: SocraticCompanionProps) {
             <div className="max-w-[85%] flex flex-col">
               {msg.role === "assistant" && (
                 <span className="text-[10px] uppercase font-extrabold text-slate-400 mb-1 pl-1 select-none flex items-center gap-1">
-                  Prof. Felipe Leon <Sparkles className="w-3 h-3 text-blue-500" />
+                  AI Study Companion <Sparkles className="w-3 h-3 text-blue-500" />
                 </span>
               )}
               <div
@@ -218,7 +218,7 @@ export default function SocraticCompanion({ course }: SocraticCompanionProps) {
           <div className="flex justify-start">
             <div className="flex flex-col max-w-[85%]">
               <span className="text-[10px] uppercase font-extrabold text-slate-400 mb-1 pl-1">
-                Prof. Leon is contemplating...
+                The AI companion is thinking...
               </span>
               <div className="bg-white text-slate-800 border border-slate-100 px-4 py-3 rounded-2xl rounded-tl-none text-xs flex items-center space-x-1.5 shadow-sm">
                 <span className="w-2 h-2 bg-slate-400 rounded-full animate-bounce [animation-delay:-0.3s]"></span>

@@ -154,7 +154,7 @@ export default function CourseModal({ course, isOpen, onClose }: CourseModalProp
                       rel="noopener noreferrer"
                       className="flex-1 inline-flex items-center justify-center gap-2 text-xs uppercase font-extrabold tracking-wider border border-blue-600 shadow-md shadow-blue-500/10 px-5 py-3.5 bg-blue-600 hover:bg-blue-700 text-white transition-all rounded-xl font-sans text-center"
                     >
-                      📓 Enter Google NotebookLM Workspace
+                      {course.notebook === "https://notebooklm.google.com/" ? "Open NotebookLM (course notebook not yet linked)" : "Open course notebook"}
                       <ExternalLink className="w-4.5 h-4.5" />
                     </a>
                   </div>
@@ -163,7 +163,7 @@ export default function CourseModal({ course, isOpen, onClose }: CourseModalProp
                 <div className="space-y-4">
                   <p className="text-xs font-sans text-slate-500 text-center select-none leading-relaxed font-semibold max-w-md mx-auto">
                     Pose any conceptual question based on <strong className="text-slate-800 font-bold">{course.num}</strong>. 
-                    Prof. Leon will act as your interactive Socratic partner, guiding you through logical deductions.
+                    An AI study companion will ask questions and help you explore the topic. Its responses are not messages from Prof. Leon.
                   </p>
                   <SocraticCompanion course={course} />
                 </div>
