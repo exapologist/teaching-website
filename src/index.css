@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
+html { scroll-padding-top: 9rem; }
+.reading-hub { font-size: 1rem; }
+.reading-hub article { scroll-margin-top: 9rem; }
+a:focus-visible, button:focus-visible, summary:focus-visible, [role="button"]:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 4px;
+}
+.skip-link { position: fixed; top: -10rem; left: 1rem; z-index: 100; padding: 1rem; background: white; color: #1e3a8a; }
+.skip-link:focus { top: 1rem; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
 @theme {
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, blinkmacsystemfont, sans-serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;

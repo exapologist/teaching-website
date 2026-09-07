@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Course } from "./types";
 import { COURSES_DATA, READING_GROUPS_DATA } from "./data/courses";
 import Ticker from "./components/Ticker";
+import ReadingHub from "./components/ReadingHub";
 import CourseModal from "./components/CourseModal";
 import QuizSection from "./components/QuizSection";
 import { motion } from "motion/react";
@@ -62,6 +63,7 @@ export default function App() {
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-400/5 rounded-full blur-[120px] pointer-events-none select-none" />
       <div className="absolute top-[40%] right-[-100px] w-[600px] h-[600px] bg-indigo-400/5 rounded-full blur-[140px] pointer-events-none select-none" />
 
+      <a href="#main-content" className="skip-link">Skip to content</a>
       {/* HEADER SECTION - Academic Prestige banner */}
       <header className="border-b border-slate-200/80 px-6 sm:px-10 py-7 flex justify-between items-center gap-5 bg-white/70 backdrop-blur-md select-none sticky top-0 z-30 shadow-sm shadow-slate-100/40">
         <div className="flex items-center gap-4">
@@ -100,7 +102,7 @@ export default function App() {
       </header>
 
       {/* TWO-COLUMN LAYOUT FRAME */}
-      <div className="flex-1 grid grid-cols-[auto_1fr_auto] min-h-[calc(100vh-120px)] relative">
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-[auto_minmax(0,1fr)_auto] min-h-[calc(100vh-120px)] relative">
         
         {/* LEFT VERTICAL LABEL STRIP */}
         <aside className="hidden h-full md:flex w-10 border-r border-slate-200/60 justify-center py-8 select-none bg-white/40">
@@ -110,7 +112,7 @@ export default function App() {
         </aside>
 
         {/* MAIN BODY SCROLLED AREA */}
-        <main className="flex flex-col">
+        <main id="main-content" className="flex flex-col min-w-0">
           
           {/* NAVIGATION ACCENTS */}
           <nav className="border-b border-slate-200/60 px-6 sm:px-10 py-3.5 flex gap-4 sm:gap-8 flex-wrap text-xs tracking-wider uppercase font-extrabold text-[#64748b] bg-white/45 select-none">
@@ -131,7 +133,7 @@ export default function App() {
           <section className="px-6 sm:px-10 py-14 md:py-20 border-b border-slate-200/80 grid grid-cols-1 md:grid-cols-2 gap-10 items-center bg-gradient-to-br from-white/80 via-white/40 to-transparent relative select-none">
             <div className="space-y-5">
               <span className="text-[10px] tracking-[0.2em] font-extrabold text-blue-600 uppercase bg-blue-50 border border-blue-100 px-3 py-1 rounded-full w-fit">
-                Excellence in Socratic Instruction
+                Explore philosophy together
               </span>
               <h2 className="font-serif font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-6.5xl leading-[1.05] tracking-tight text-[#0f172a]">
                 Think <span className="italic font-medium text-[#1e3a8a]">Deeply</span>.<br />
@@ -139,30 +141,18 @@ export default function App() {
                 Live <span className="italic font-medium text-[#1e3a8a]">Examined</span>.
               </h2>
               <p className="text-sm md:text-base font-serif leading-relaxed text-[#475569] max-w-lg">
-                A modern gateway to philosophy. Engage in official curricula at El Camino College alongside integrated AI Socratic tutors, customized Google NotebookLMs, research portfolios, and immediate self-assessments. Explore logic, ethics, Epistemology, and beyond.
+                Explore philosophy through courses, reading groups, and practice questions. Start with our philosophy of physics and science reading group, or browse the subjects below.
               </p>
             </div>
 
             {/* Glossy Modern Globe composition representing pristine academia */}
             <div className="flex flex-col items-start md:items-end gap-6">
-              <div className="relative w-52 h-44 shrink-0 self-start md:self-auto flex items-center justify-center">
-                
-                {/* Glossy sphere back drop glow */}
-                <div className="w-32 h-32 bg-gradient-to-tr from-blue-600/20 via-indigo-500/10 to-transparent rounded-full absolute blur-xl animate-pulse" />
-                
-                {/* Celestial reflective academic sphere */}
-                <div className="w-28 h-28 bg-gradient-to-tr from-[#1e293b] via-[#334155] to-[#f8fafc] rounded-full absolute shadow-2xl relative border border-white/50 flex items-center justify-center overflow-hidden">
-                  {/* Subtle highlights defining sphere dimensionality */}
-                  <div className="w-full h-full bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.45),transparent_70%)] absolute inset-0" />
-                  <div className="w-16 h-16 rounded-full bg-white/20 absolute -top-5 -left-5 blur-sm" />
-                </div>
-
-                {/* Frosted orbital ring glass slice */}
-                <div className="absolute w-44 h-11 bg-white/30 backdrop-blur-[6px] rounded-full border border-white/60 shadow-lg transform -rotate-12 translate-y-3" />
-                
-                {/* Small indicator satellite node */}
-                <div className="absolute w-5 h-5 rounded-full bg-gradient-to-tr from-[#3b82f6] to-[#06b6d4] shadow-md border-2 border-white transform translate-x-12 -translate-y-10 animate-bounce [animation-duration:4s]" />
-              </div>
+              <a href="#reading-groups" className="w-full max-w-md rounded-2xl bg-slate-900 text-white p-7 shadow-lg hover:bg-blue-950 transition-colors">
+                <span className="text-sm font-semibold tracking-widest uppercase text-blue-200">Our reading group</span>
+                <span className="block font-serif text-3xl sm:text-4xl mt-3 leading-tight">Physics, science<br />& the nature of reality</span>
+                <span className="block mt-4 text-base leading-relaxed text-slate-200">Maudlin · Lewis · Godfrey-Smith</span>
+                <span className="block mt-5 text-base font-semibold">Explore the readings →</span>
+              </a>
 
               <a 
                 href="https://sites.google.com/view/felipeleon/home" 
@@ -179,6 +169,8 @@ export default function App() {
           {/* INFINITE COMPACT MARQUEE */}
           <Ticker />
 
+          <ReadingHub />
+
           {/* SECTION: ACADEMIC COURSE GRID CATALOG */}
           <section id="courses" className="scroll-mt-12 select-none">
             {/* Elegant Section Title Ribbon */}
@@ -190,7 +182,7 @@ export default function App() {
                 </h3>
               </div>
               <span className="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 bg-slate-50 border border-slate-100 px-3 py-1 rounded-full">
-                {COURSES_DATA.length} Course Syllabus Records
+                {COURSES_DATA.length} Course Descriptions
               </span>
             </div>
 
@@ -252,22 +244,22 @@ export default function App() {
           </section>
 
           {/* SECTION: ACADEMIC READING SEMINAR GROUPS */}
-          <section id="reading-groups" className="scroll-mt-12 select-none">
+          <section id="further-reading" className="scroll-mt-12">
             <div className="px-6 sm:px-10 py-5 bg-white border-b border-slate-200/70 flex justify-between items-center bg-white">
               <div>
                 <span className="text-[10px] uppercase font-extrabold tracking-widest text-indigo-600 block mb-0.5">Extracurricular</span>
                 <h3 className="font-serif font-bold text-2xl sm:text-3xl text-[#0f172a]">
-                  Philosophy Seminar Reading Groups
+                  Further Reading Interests
                 </h3>
               </div>
               <span className="text-[10px] uppercase font-extrabold tracking-wider text-slate-400 bg-slate-50 border border-slate-100 px-3 py-1 rounded-full">
-                Professional Research Speeds
+                Future topics
               </span>
             </div>
 
             {/* Three-column glass accent boxes */}
-            <div className="grid grid-cols-1 md:grid-cols-3 bg-slate-200/50 gap-[1px] border-b border-slate-200">
-              {READING_GROUPS_DATA.map((gp, idx) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 bg-slate-200/50 gap-[1px] border-b border-slate-200">
+              {READING_GROUPS_DATA.filter(gp => gp.index !== "01").map((gp, idx) => (
                 <div 
                   key={idx} 
                   className="p-7 bg-white hover:bg-gradient-to-b hover:from-white hover:to-[#fafbfe] transition-colors flex flex-col justify-between"
@@ -285,7 +277,7 @@ export default function App() {
                   </div>
                   <div className="text-[10px] uppercase tracking-wider font-extrabold text-[#0f172a] border-t border-slate-100 mt-6 pt-4 flex items-start gap-2 select-none">
                     <span className="shrink-0 text-xs">📓</span>
-                    <span className="leading-relaxed text-[#64748b] font-semibold">{gp.format}</span>
+                    <span className="leading-relaxed text-[#64748b] font-semibold">Reading plans and materials to follow.</span>
                   </div>
                 </div>
               ))}
@@ -315,10 +307,10 @@ export default function App() {
                     Philosophy <span className="italic text-[#1e3a8a] font-normal">Beyond</span> the Classroom
                   </h4>
                   <p className="text-xs sm:text-sm font-serif leading-relaxed text-[#475569]">
-                    These unofficial course guidelines are designed to be taken <em>concurrently with official academic courses at ECC</em>. Doing so exposes students early to graduate-level seminar speeds and advanced argumentation criteria.
+                    Use these optional resources to revisit a difficult idea, try a practice quiz, or explore a topic beyond your coursework.
                   </p>
                   <p className="text-xs sm:text-sm font-serif leading-relaxed text-[#475569]">
-                    All material modules contain structured Google NotebookLM companion guides, infographics, research podcasts, reading worksheets, and active self-assessment metrics.
+                    Reading-group materials will be added as they become available. The AI tutor and generated quizzes offer additional practice; compare their responses with the assigned texts.
                   </p>
                   <div className="pt-2">
                     <a 
@@ -397,6 +389,8 @@ export default function App() {
         <aside 
           onClick={scrollToTop} 
           role="button"
+          tabIndex={0}
+          onKeyDown={event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); scrollToTop(); } }}
           aria-label="Scroll back to top of course page"
           className="hidden md:flex w-10 border-l border-slate-200/60 justify-center py-8 cursor-pointer select-none bg-white hover:bg-blue-600 hover:text-white text-slate-400 transition-all focus:ring-1 focus:ring-blue-400"
         >
