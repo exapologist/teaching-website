@@ -1,0 +1,6 @@
+{
+  "name": "Philosophy Courses @ ECC",
+  "description": "Philosophy course portal, reading groups, and interactive Socratic study assistant for El Camino College courses by Prof. Felipe Leon.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
